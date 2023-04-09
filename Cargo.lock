@@ -79,15 +79,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "guessing_game"
-version = "0.1.0"
-dependencies = [
- "crossterm 0.26.1",
- "rand",
- "tui",
-]
-
-[[package]]
 name = "libc"
 version = "0.2.141"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -190,6 +181,15 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "fb5a58c1855b4b6819d59012155603f0b22ad30cad752600aadfcb695265519a"
 dependencies = [
  "bitflags",
+]
+
+[[package]]
+name = "sandbox"
+version = "0.1.0"
+dependencies = [
+ "crossterm 0.26.1",
+ "rand",
+ "tui",
 ]
 
 [[package]]
