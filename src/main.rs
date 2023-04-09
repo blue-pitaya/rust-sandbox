@@ -9,12 +9,19 @@ fn main() {
 
     loop {
         println!("Pick number: ");
-
         // guess must be new string each time, because read_line appends to extisings string
         let mut guess = String::new();
+        // throws error (panic)
         io::stdin().read_line(&mut guess).expect("Error!");
 
-        let guess1: u32 = guess.trim().parse().expect("Not a number!");
+        // ResulfF = MonadError?
+        let guess1: u32 = match guess.trim().parse() {
+            Ok(num) => num,
+            Err(_parse_int_error) => {
+                println!("Not a number!");
+                continue;
+            }
+        };
 
         match guess1.cmp(&secret_number) {
             std::cmp::Ordering::Less => println!("Too little!"),
