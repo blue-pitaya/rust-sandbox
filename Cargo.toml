@@ -7,6 +7,7 @@ edition = "2021"
 
 [dependencies]
 crossterm = "0.26.1"
+ncurses = "5.101.0"
 rand = "0.8.5"
 tui = "0.19.0"
 
@@ -25,3 +26,15 @@ path = "src/tui_example.rs"
 [[bin]]
 name = "canvas"
 path = "src/canvas.rs"
+
+[[bin]]
+name = "http_server"
+path = "src/http_server.rs"
+
+[[bin]]
+name = "ncurses_example"
+path = "src/ncurses_example.rs"
+
+[[bin]]
+name = "snake"
+path = "src/snake.rs"
